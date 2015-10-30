@@ -1,0 +1,220 @@
+.master-header {
+	position: fixed;
+	top: 0;
+	display: flex;
+	height: 70px;
+	width: 100%;
+	z-index: 900;
+	background-color: black;
+	-webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.5);
+}
+
+.master-header:hover {
+	position: fixed;
+	top: 0;
+	display: flex;
+	height: 70px;
+	width: 100%;
+	z-index: 900;
+}
+
+.home-header {
+	position: fixed;
+	top: 0;
+	display: flex;
+	height: 70px;
+	width: 100%;
+	z-index: 1000;
+}
+
+.home-header:hover {
+	position: fixed;
+	top: 0;
+	display: flex;
+	height: 70px;
+	width: 100%;
+	z-index: 1000;
+	background-color: rgba(0,0,0,.5);
+	-webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.5);
+}
+
+.nav-down {
+	position: fixed;
+	top: 0;
+	display: flex;
+	height: 70px;
+	width: 100%;
+	z-index: 1000;
+	background-color: rgba(0,0,0,.7);
+	-webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.5);
+}
+
+@media screen and (max-width: 880px) {
+	
+	.home-header {
+		background-color: rgba(0,0,0,.5);
+		-webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.5);
+	}
+	
+	.navicon-wrap {
+		margin-left: 10px;
+		width: 50px;
+		height: 70px;
+		text-align: right;
+		background: url(/images/icon.png) no-repeat;
+		background-position: center center;
+		background-size: 70%;
+		cursor: pointer;
+	}
+
+	.navicon-wrap:hover {
+		background: url(/images/iconRO.png) no-repeat;
+		background-position: center center;
+		background-size: 70%;
+	}
+
+}
+
+.mobile-menu {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,.9);
+	z-index: 2000;
+}
+
+.mobile-menu-wrap {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.mobile-menu-option {
+	margin: 10px;
+	width: 300px;
+	height: 50px;
+	border: 1px solid #86754d;
+	color: #86754d;
+	font-size: 20pt;
+	text-transform: uppercase;
+	line-height: 50px;
+}
+
+.mobile-menu-option:hover {
+	border: 1px solid #d00000;
+	color: #d00000;
+}
+
+.mobile-menu.on {
+	display: block;
+}
+
+.logo {
+	margin-left: 10px;
+	min-width: 235px;
+	height: 70px;
+	background: url('/images/vinumaurilogowhite.png') no-repeat;
+    background-size: 235px 65px;
+    background-position: center center;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 470px) {
+    
+    .logo {
+    	min-width: 70px;
+		background: url('/images/valogowhite.png') no-repeat;
+    	background-size: contain;
+    	background-position: left center;
+	}
+
+}
+
+.logo:hover {
+	background: url('/images/vinumaurilogo.png') no-repeat;
+    background-size: 235px 65px;
+    background-position: center center;
+}
+
+@media screen and (max-width: 470px) {
+
+	.logo:hover {
+    	min-width: 70px;
+		background: url('/images/valogo.png') no-repeat;
+    	background-size: contain;
+    	background-position: left center;
+	}
+
+}
+
+.navbar-wrap {
+	flex: 1;
+	line-height: 70px;
+	text-align: right;
+	margin-right: 10px;
+}
+
+nav {
+	min-width: 550px;
+}
+
+@media screen and (max-width: 880px) {
+
+	nav {
+		display: none;
+	}
+
+}
+
+nav a {
+	padding: 30px 5px;
+	margin: 0px 0px 0px 10px;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	font-weight: 200;
+}
+
+.header-sub {
+	position: fixed;
+	top: 70px;
+	right: 0;
+	width: 180px;
+	height: 35px;
+	background: url('/images/headersub1.png') no-repeat;
+	text-align: right;
+	color: white;
+	font-size: 10pt;
+	z-index: 1200;
+}
+
+.header-sub span {
+	line-height: 35px;
+	margin-right: 15px;
+	font-weight: 100;
+}
+
+.cart {
+	width: 50px;
+	height: 30px;
+	padding-top: 40px;
+	margin-right: 10px;
+	color: #d00000;
+	font-size: 10pt;
+	cursor: pointer;
+	background: url('/images/cart.png') no-repeat;
+	background-size: 40px 40px;
+    background-position: center center;
+}
+
+.cart-count {
+	position: fixed;
+	top: 17px;
+	right: 19px;
+	height: 30px;
+	width: 30px;
+}
