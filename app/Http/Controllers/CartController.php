@@ -1,26 +1,35 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Order;
+use App\Models\Product;
+use Request;
+use Session;
 
 class CartController extends Controller 
 {
 
 	public function addProductToCart() {
-		
-		$cart = session('cart');
+		$cart = [];
 
-		if(!$cart){
-			$cart = [];
-			session(['cart' => $cart];
+		if (Session::has('cart')) {
+			$cart = Session::get('cart');
 		}
+ 
+		$productID = Request::input('productID');
+		$quantity = Request::input('quantity');
+
+		$cart[$productID] = $quantity;
+
+		Session::put('cart', $cart);
+
+		return $cart;
+	}
+
+	public function removeProductFromCart() {	
 
 	}
 
-	public function deleteProductFromCart() {
-		
-		$product = Cart::deleteItem($invoice_id,$item_id);
-		return redirect("invoice/{$invoice_id}");
+	public function updateQuantity() {	
 
 	}
 }

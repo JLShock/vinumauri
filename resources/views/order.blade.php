@@ -17,33 +17,33 @@
 				<div class="product-image">
 					<img src="/products/{{$products[1]->productImg}}">
 				</div>
-				<div class="product-detail">{{$products[1]->vintage}}<br> {{$products[1]->wineType}}</div>
+				<div class="product-detail">{{$products[1]->name}}<br> {{$products[1]->vintage}} {{$products[1]->wineType}}</div>
 				<div class="product-price">${{$products[1]->price}}</div>
 				<div>
-					<input type="number" name="quantity" min="1" placeholder="1">
-					<button class="add">Add</button>
+					<input type="number" name="quantity" min="1" placeholder="2" value="2">
+					<button class="add-button" data-productID="2">Add</button>
 				</div>
 			</div>
 			<div class="order-product">
 				<div class="product-image">
 					<img src="/products/{{$products[2]->productImg}}">
 				</div>
-				<div class="product-detail">{{$products[2]->vintage}}<br> {{$products[2]->wineType}}</div>
+				<div class="product-detail">{{$products[2]->name}}<br> {{$products[2]->vintage}} {{$products[2]->wineType}}</div>
 				<div class="product-price">${{$products[2]->price}}</div>
 				<div>
-					<input type="number" name="quantity" min="1" placeholder="1">
-					<button class="add">Add</button>
+					<input type="number" name="quantity" min="1" placeholder="5" value="5">
+					<button class="add-button" data-productID="3">Add</button>
 				</div>
 			</div>
 			<div class="order-product">
 				<div class="product-image">
 					<img src="/products/{{$products[3]->productImg}}">
 				</div>
-				<div class="product-detail">{{$products[3]->name}}<br> {{$products[2]->vintage}} {{$products[2]->wineType}}</div>
+				<div class="product-detail">{{$products[3]->name}}<br> {{$products[3]->vintage}} {{$products[3]->wineType}}</div>
 				<div class="product-price">${{$products[3]->price}}</div>
 				<div>
 					<input type="number" name="quantity" min="1" placeholder="1">
-					<button class="add">Add</button>
+					<button class="add-button" data-productID="4">Add</button>
 				</div>
 			</div>
 			<div class="order-product">
@@ -54,7 +54,7 @@
 				<div class="product-price">${{$products[4]->price}}</div>
 				<div>
 					<input type="number" name="quantity" min="1" placeholder="1">
-					<button class="add">Add</button>
+					<button class="add-button" data-productID="5">Add</button>
 				</div>
 			</div>
 			<div class="order-product">
@@ -62,10 +62,9 @@
 					<img src="/products/{{$products[0]->productImg}}">
 				</div>
 				<div class="product-detail">{{$products[0]->name}}<br> 1 case/year @ 20% off</div>
-				<div class="product-price">${{$products[0]->price}}</div>
 				<div>
-					<input type="number" name="quantity" min="1" placeholder="1">
-					<button class="add">Add</button>
+					<input type="hidden" name="wineclub" value="1">
+					<button class="add-button join" data-productID="1">Join</button>
 				</div>
 			</div>
 		</div>
@@ -78,8 +77,14 @@
 			</a>
 		</div>
 	</section>
-@endsection
-
-<script>
 	
-</script>
+	<script type=text/javascript>
+		$(document).ready(function() {
+			$.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': '{!! csrf_token() !!}'
+                }
+            });
+		});
+	</script>
+@endsection

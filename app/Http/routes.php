@@ -28,7 +28,7 @@ Route::get('thewine', function () {
     return view('thewine');
 });
 
-Route::get('order', 'OrderController@showAll');
+Route::get('order', 'ProductController@showAll');
 
 Route::get('cart', function () {
     return view('cart');
@@ -50,7 +50,7 @@ Route::get('contact', function () {
     return view('contact');
 });
 
-Route::get('/api/cart/add', function () {});
+Route::post('/api/cart/add', 'CartController@addProductToCart');
 
 /*
 |--------------------------------------------------------------------------

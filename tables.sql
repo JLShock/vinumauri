@@ -13,12 +13,12 @@ create table products (
     productImg varchar(255)
 );
 
-insert into products (productType, name, wineType, price, productImg) values
-    ('club','Vinum Auri Wine Club', 'Cabernet Sauvignon', 1200.00, 'wineclub.png');
+insert into products (productType, name, wineType, productImg) values
+    ('club','Vinum Auri Wine Club', 'Cabernet Sauvignon', 'wineclub.png');
 
-insert into products (productType, vintage, wineType, price, quantityInStock, productImg) values
-    ('wine','2010', 'Cabernet Sauvignon', 150.00, 50, '2010vinumauricabernetsauvignon.png'),
-    ('wine','2011', 'Cabernet Sauvignon', 125.00, 500, '2011vinumauricabernetsauvignon.png');
+insert into products (productType, name, vintage, wineType, price, quantityInStock, productImg) values
+    ('wine', '1 bottle', '2010', 'Cabernet Sauvignon', 150.00, 50, '2010vinumauricabernetsauvignon.png'),
+    ('wine', '1 bottle', '2011', 'Cabernet Sauvignon', 125.00, 500, '2011vinumauricabernetsauvignon.png');
 
 insert into products (productType, name, vintage, wineType, price, productImg) values
     ('wine', '1 case', '2011', 'Cabernet Sauvignon', 1500.00, '2011vinumauricase.png');

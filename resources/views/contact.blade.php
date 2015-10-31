@@ -12,7 +12,7 @@
 			<h1>Contact</h1>
 		</div>
 		<div class="contact-wrap">
-			<div class="map"></div>
+			<div id="map"></div>
 			<div class="contact-info-wrap">
 				<div>
 					<h2>Phone:</h2>
@@ -43,5 +43,8 @@
 			</div>
 		</div>
 	</section>
-
+	
+	<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	<script src="/bower_components/gmaps/gmaps.js"></script>
+	<script src="/js/g_maps.js"></script>
 @endsection

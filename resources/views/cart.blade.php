@@ -42,5 +42,4 @@
 			<button class="checkout-button"><a href="/checkout">Checkout</a></button>
 		</div>
 	</section>
-
 @endsection

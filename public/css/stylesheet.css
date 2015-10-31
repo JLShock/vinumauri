@@ -92,6 +92,30 @@ h2 {
 	padding: 0;
 }
 
+.display-bottle {
+	margin: 0 auto;
+	height: 225px;
+	width: 150px;
+	background: url(/images/vinumauribottle.png) no-repeat;
+	background-position: center center;
+	background-size: contain;
+}
+
+.about-wrap {
+	margin: 0 auto;
+	width: 85%;
+	margin-bottom: 40px;
+}
+
+.about-content {
+	text-align: left;
+	color: white;
+}
+
+.about-content h4 {
+	color: #D00000;
+}
+
 .products-wrap {
 	margin: 0 auto;
 	width: 80%;
@@ -170,9 +194,13 @@ h2 {
 	margin-bottom: 10px;
 }
 
-.add {
+.add-button {
 	border: none;
 	background-color: #D00000;
+}
+
+.join {
+	margin-top: 40px;
 }
 
 .cart-items {
@@ -430,7 +458,7 @@ h2 {
 	text-align: left;
 }
 
-.map {
+#map {
 	margin: 0 auto;
 	margin-top: 10px;
 	width: 85%;
@@ -443,7 +471,7 @@ h2 {
 
 @media screen and (min-width: 470px) {
 	
-	.map {
+	#map {
 		width: 85%;
 		height: 250px;
 	}
@@ -452,7 +480,7 @@ h2 {
 
 @media screen and (min-width: 890px) {
 	
-	.map {
+	#map {
 		margin-top: 20px;
 		display: inline-block;
 		width: 415px;

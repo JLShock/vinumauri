@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Order;
+use App\Models\Product;
 
-class OrderController extends Controller 
+class ProductController extends Controller 
 {
 	public function showAll() {
-		$products = Order::allProductsDetails();
+		$products = Product::allProductsDetails();
 		return view('order', ['products'=>$products]);
 	}
 }

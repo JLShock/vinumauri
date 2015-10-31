@@ -2,7 +2,7 @@
 namespace App\Models;
 use DB;
 
-class Order {
+class Product {
 
 	public static function allProductsDetails() {
  
