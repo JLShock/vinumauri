@@ -13,15 +13,15 @@ create table products (
     productImg varchar(255)
 );
 
-insert into products (productType, name, wineType, productImg) values
-    ('club','Vinum Auri Wine Club', 'Cabernet Sauvignon', 'wineclub.png');
+insert into products (productType, name, wineType, price, productImg) values
+    ('club','Vinum Auri Wine Club', 'Cabernet Sauvignon', 1200.00,'wineclub.png');
 
 insert into products (productType, name, vintage, wineType, price, quantityInStock, productImg) values
     ('wine', '1 bottle', '2010', 'Cabernet Sauvignon', 150.00, 50, '2010vinumauricabernetsauvignon.png'),
     ('wine', '1 bottle', '2011', 'Cabernet Sauvignon', 125.00, 500, '2011vinumauricabernetsauvignon.png');
 
-insert into products (productType, name, vintage, wineType, price, productImg) values
-    ('wine', '1 case', '2011', 'Cabernet Sauvignon', 1500.00, '2011vinumauricase.png');
+insert into products (productType, name, vintage, wineType, price, quantityInStock, productImg) values
+    ('wine', '1 case', '2011', 'Cabernet Sauvignon', 1500.00, 40, '2011vinumauricase.png');
 
 insert into products (productType, name, price, quantityInStock, productImg) values
     ('storage','Mahogany 2 Bottle Wine Chest w/ Custom Key', 99.00, 35, 'winechest.png');
@@ -51,7 +51,7 @@ insert into users (email, password, firstName, lastName, address1, address2, cit
 
 create table orders (
     orderID int auto_increment primary key,
-    customerID int,
+    userID int,
     orderDate datetime,
     total decimal(7,2),
     shipping varchar(255),

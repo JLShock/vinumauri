@@ -15,13 +15,9 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('account', ['middleware' => 'auth',function () {
-    $id = Auth::user()->id;
-    return redirect("account/$id");
-}]);
-
-Route::get('account/{id}', ['middleware' => 'auth', function ($id) {
-    return view("account" , ['id' => $id]);
+Route::get('account', ['middleware' => 'auth', function () {
+    $user = Auth::user();
+    return view("account" , ['user' => $user]);
 }]);
 
 Route::get('thewine', function () {
@@ -29,10 +25,6 @@ Route::get('thewine', function () {
 });
 
 Route::get('order', 'ProductController@showAll');
-
-Route::get('cart', function () {
-    return view('cart');
-});
 
 Route::get('checkout', function () {
     return view('checkout');
@@ -50,7 +42,14 @@ Route::get('contact', function () {
     return view('contact');
 });
 
+/*
+|--------------------------------------------------------------------------
+| Cart Routes
+|--------------------------------------------------------------------------
+*/
+Route::get('cart','CartController@showCart');
 Route::post('/api/cart/add', 'CartController@addProductToCart');
+Route::post('/api/cart/remove', 'CartController@removeProductFromCart');
 
 /*
 |--------------------------------------------------------------------------

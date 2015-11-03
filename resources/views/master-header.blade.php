@@ -28,6 +28,7 @@
 	<a href="/cart">
 		<div class="cart">
 			<div class="cart-count">0</div>
+			{{-- <div class="cart-count">{{ count($cart) }}</div> --}}
 		</div>
 	</a>
 </header>

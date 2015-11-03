@@ -25,11 +25,32 @@ class CartController extends Controller
 		return $cart;
 	}
 
-	public function removeProductFromCart() {	
+	public function showCart() {
+
+		if (Session::has('cart')) {
+			$cart = Session::get('cart');
+			$products = Product::allProductsDetails();
+		} else {
+			$cart = [];
+			$products = [];
+		}
+
+		return view('cart', ['cart' => $cart, 'products' => $products]);
 
 	}
 
-	public function updateQuantity() {	
+	public function removeProductFromCart() {
+		if (Session::has('cart')) {
+			$cart = Session::get('cart');
+		}
+		
+		$productID = Request::input('productID');
 
+		unset($cart[$productID]);
+
+		Session::set('cart', $cart);
+		
+		return $cart;
 	}
+
 }

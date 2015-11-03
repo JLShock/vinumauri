@@ -7,6 +7,7 @@ class ProductController extends Controller
 {
 	public function showAll() {
 		$products = Product::allProductsDetails();
-		return view('order', ['products'=>$products]);
+		return view('order', ['products' => $products]);
 	}
+	
 }

@@ -183,9 +183,10 @@ nav a {
 	position: fixed;
 	top: 70px;
 	right: 0;
-	width: 180px;
-	height: 35px;
+	width: 185px;
+	height: 50px;
 	background: url('/images/headersub1.png') no-repeat;
+	background-size: contain;
 	text-align: right;
 	color: white;
 	font-size: 10pt;
@@ -193,7 +194,7 @@ nav a {
 }
 
 .header-sub span {
-	line-height: 35px;
+	line-height: 25px;
 	margin-right: 15px;
 	font-weight: 100;
 }
@@ -217,4 +218,5 @@ nav a {
 	right: 19px;
 	height: 30px;
 	width: 30px;
+	font-weight: 500;
 }

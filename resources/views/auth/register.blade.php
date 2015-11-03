@@ -19,23 +19,23 @@
 
 			    <div>
 			    	<strong>First Name:</strong><br>
-			        <input type="text" name="firstname" value="{{ old('firstName') }}">
+			        <input type="text" name="firstName" value="{{ old('firstName') }}" required>
 			    </div>
 			    <div>
 			    	<strong>Last Name:</strong><br>
-			        <input type="text" name="lastname" value="{{ old('lastName') }}">
+			        <input type="text" name="lastName" value="{{ old('lastName') }}" required>
 			    </div>
 			    <div>
 			    	<strong>Email:</strong><br>
-			        <input type="email" name="email" value="{{ old('email') }}">
+			        <input type="email" name="email" value="{{ old('email') }}" required>
 			    </div>
 			    <div>
 			        <strong>Password:</strong><br>
-			        <input type="password" name="password">
+			        <input type="password" name="password" required>
 			    </div>
 			    <div>
 			        <strong>Confirm Password:</strong><br>
-			        <input type="password" name="password_confirmation">
+			        <input type="password" name="password_confirmation" required>
 			    </div><br>
 			    <div>
 			        <button class="login-button" type="submit">Register</button>
