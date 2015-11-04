@@ -16,7 +16,7 @@
 			@foreach($products as $product)
 				@if(isset($cart[$product->id]))
 					<?php $cartTotal += ($product->price * $cart[$product->id]);?>
-					<tr class="cart-item" data-productID="{{$product->id}}">
+					<tr class="cart-item" data-productID="{{ $product->id }}">
 						<td>
 							<div class="cart-product-image">
 								<img src="/products/{{ $product->productImg }}">
@@ -27,7 +27,7 @@
 								{{ $product->name }}
 							</td>
 							<td class="cart-item-price">
-								{{ $product->price}}
+								{{ $product->price }}
 							</td>
 							<td class="cart-item-quantity">
 								# <input class="item-quantity" type="number" name="quantity" value="1" readonly>
@@ -61,9 +61,11 @@
 		<div class="cart-total">
 			( <span class="cart-total-count">{{ count($cart) }}</span> ) Total: <span class="cart-total-price">{{ money_format('$%i', $cartTotal) }}</span>
 		</div>
-		<div class="cart-checkout">
-			<button class="checkout-button"><a href="/checkout">Checkout</a></button>
-		</div>
+		@if(count($cart) > 0)
+			<div class="cart-checkout">
+				<button class="checkout-button"><a href="/checkout">Checkout</a></button>
+			</div>
+		@endif
 	</section>
 
 	<script type=text/javascript>

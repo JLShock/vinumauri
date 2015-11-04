@@ -5,6 +5,7 @@ body {
 	text-align: center;
 	font-family: Work Sans;
 	font-weight: 300;
+	color: white;
 }
 
 a {
@@ -16,44 +17,110 @@ a:hover {
 	color: #d00000;
 }
 
+.error-message {
+	margin: 0 auto;
+	width: 300px;
+	padding: 10px 5px;
+	background-color: black;
+	color: #d00000;
+	font-style: italic;
+	font-size: 9pt;
+	font-weight: 500;
+}
+
+/********************************************
+PAGE BACKGROUNDS
+*********************************************/
+.home-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: url(/images/vinumauriwine2.jpg) no-repeat fixed;
+	background-position: center center;
+	background-size: cover;
+	z-index: -100; 
+}
+
+.thewine-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: url(/images/thevinumauriwine.jpg) no-repeat fixed;
+	background-position: center center;
+	background-size: cover;
+	z-index: -100; 
+}
+
+.order-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: url(/images/ordervinumauri.jpg) no-repeat fixed;
+	background-position: center center;
+	background-size: cover;
+	z-index: -100; 
+}
+
+.membership-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: url(/images/vinumauricase.jpg) no-repeat fixed;
+	background-position: center center;
+	background-size: cover;
+	z-index: -100; 
+}
+
+.history-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: url(/images/vinumaurihistory.jpg) no-repeat fixed;
+	background-position: center center;
+	background-size: cover;
+	z-index: -100; 
+}
+
+.contact-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: url(/images/vinumauribottles.jpg) no-repeat fixed;
+	background-position: center center;
+	background-size: cover;
+	z-index: -100; 
+}
+
+.background-mask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #86754d;
+	opacity: .93;
+	z-index: -50; 
+}
+
 /********************************************
 LAYOUTS
 *********************************************/
-
-/********************************************
-COMPONENTS
-*********************************************/
-
-.home-actions {
-	position: fixed;
-	top: 50%;
-	right: 0;
-	margin-top: -50px;
-	width: 250px;
-}
-
-.home-action {
-	background-color: rgba(134,117,77,.8);
-	width: 250px;
-	height: 50px;
-	line-height: 50px;
-	color: black;
-	font-size: 13pt;
-	font-weight: 400;
-	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
-	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
-	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
-}
-
-.home-action:last-child {
-	margin-top: 10px;
-}
-
 .hero-panel {
 	height: 100%;
 	width: 100%;
 	padding-top: 115px;
-	color: white;
 }
 
 .main-title {
@@ -71,6 +138,52 @@ COMPONENTS
 		width: 950px;
 	}
 
+}
+
+/********************************************
+HOME
+*********************************************/
+@media screen and (max-width: 880px) {
+
+	.home-actions {
+		display: block;
+		position: fixed;
+		bottom: 25px;
+		left: 5%;
+		right: 5%;
+		width: 90%;
+	}
+
+}
+
+@media screen and (min-width: 880px) {
+
+	.home-actions {
+		display: none;
+	}
+
+}
+
+.home-action {
+	background-color: rgba(134,117,77,.8);
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	font-size: 13pt;
+	font-weight: 300;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+}
+
+.home-action:hover {
+	background-color: rgba(0,0,0,.8);
+	color: white;
+
+}
+
+.home-action:last-child {
+	margin-top: 10px;
 }
 
 h1 {
@@ -92,6 +205,9 @@ h2 {
 	padding: 0;
 }
 
+/********************************************
+THE WINE
+*********************************************/
 .display-bottle {
 	margin: 0 auto;
 	height: 225px;
@@ -105,17 +221,96 @@ h2 {
 	margin: 0 auto;
 	width: 85%;
 	margin-bottom: 40px;
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+@media screen and (min-width: 900px) {
+
+	.about-wrap {
+		width: 800px;
+	}
+
 }
 
 .about-content {
 	text-align: left;
 	color: white;
+	background-color: rgba(0,0,0,.8);
+	padding: 50px;
+}
+
+@media screen and (max-width: 480px) {
+
+	.about-content {
+		padding: 25px;
+	}
+
+}
+
+@media screen and (min-width: 820px) {
+
+	.about-title-collapse {
+		vertical-align: top;
+		display: inline-flex;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+
+	.title-collapse-left {
+		flex: 5;
+	}
+
+	.title-collapse-right {
+		flex: 1;
+		min-width: 280px;
+		text-align: right;
+	}
+
+}
+
+@media screen and (max-width: 820px) {
+
+	.about-title-collapse {
+		vertical-align: top;
+		display: block;
+		width: 100%;
+	}
+
+	.title-collapse-left {
+		flex: 5;
+	}
+
+	.title-collapse-right {
+		min-width: 280px;
+	}
+
 }
 
 .about-content h4 {
+	margin: 0;
 	color: #D00000;
+	font-weight: 300;
+	margin-bottom: 15px;
 }
 
+.wine-review {
+	margin: 0;
+	color: #86754d;
+	font-weight: 300;
+	font-style: italic;
+}
+
+.wine-of-gold {
+	padding-top: 15px;
+	color: #86754d;
+	font-weight: 500;
+}
+
+/********************************************
+ORDER
+*********************************************/
 .products-wrap {
 	margin: 0 auto;
 	width: 80%;
@@ -146,6 +341,52 @@ h2 {
 	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
 
+.product-image {
+	margin: 10px auto;
+	height: 180px;
+	width: 160px;
+}
+
+.product-image img {
+	height: 100%;
+	width: 100%;
+}
+
+.product-detail {
+	height: 50px;
+	margin: 20px auto 10px auto;
+	width: 200px;
+	font-weight: 300;
+	font-family: Prata;
+	font-size: 13pt;
+	color: #86754d;
+}
+
+.product-price {
+	margin-bottom: 20px;
+	color: #D00000;
+}
+
+.order-product input {
+	width: 35px;
+	color: black;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.product-purchase {
+	margin-bottom: 10px;
+}
+
+.add-button {
+	border: none;
+	background-color: #D00000;
+}
+
+.join {
+	margin-top: 40px;
+}
+
 .goto-cart {
 	margin: 0 auto 20px auto;
 	width: 125px;
@@ -164,45 +405,54 @@ h2 {
 	width: 25px;
 }
 
-.product-image {
-	margin: 10px auto;
-	height: 180px;
-	width: 160px;
+/********************************************
+MEMBERSHIP
+*********************************************/
+.membership-wrap {
+	margin: 0 auto;
+	width: 85%;
+	margin-bottom: 40px;
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
 
-.product-image img {
-	height: 100%;
-	width: 100%;
+.membership-content {
+	height: 525px;
+	text-align: left;
+	padding: 5px 25px; 
+	background-color: rgba(0,0,0,.8);
 }
 
-.product-detail {
-	height: 50px;
-	margin: 20px auto 10px auto;
-	width: 200px;
-	font-weight: 400;
+/********************************************
+HISTORY
+*********************************************/
+.history-wrap {
+	margin: 0 auto;
+	width: 85%;
+	margin-bottom: 40px;
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
 
-.product-price {
-	margin-bottom: 20px;
-	color: #D00000;
+@media screen and (min-width: 1050px) {
+	
+	.history-wrap {
+		width: 910px;
+	}
+
 }
 
-.order-product input {
-	width: 35px;
-	color: black;
-	text-align: center;
-	margin-bottom: 10px;
+.history-content {
+	text-align: left;
+	padding: 5px 25px; 
+	background-color: rgba(0,0,0,.8);
 }
 
-.add-button {
-	border: none;
-	background-color: #D00000;
-}
-
-.join {
-	margin-top: 40px;
-}
-
+/********************************************
+CART
+*********************************************/
 .cart-items {
 	margin: 10px auto 0 auto;
 	width: 70%;
@@ -211,7 +461,10 @@ h2 {
 }
 
 .cart-item {
-	border-bottom: 1px solid black;
+	background-color: rgba(0,0,0,.8);
+	border-bottom: 1px solid #D00000;
+	color: white;
+	font-weight: 200;
 }
 
 .cart-item td {
@@ -236,6 +489,10 @@ h2 {
 	width: 80px;
 }
 
+.cart-item-price {
+	color: #D00000; 
+}
+
 .cart-product-image img {
 	height: 100%;
 	width: 100%;
@@ -250,7 +507,8 @@ h2 {
 .cart-delete {
 	font-size: 18pt;
 	font-weight: 500;
-	color: #D00000; 
+	color: #D00000;
+	margin-right: 5px;
 }
 
 .cart-delete:hover {
@@ -278,6 +536,9 @@ h2 {
 	background-color: black;
 }
 
+/********************************************
+CHECKOUT
+*********************************************/
 .personal-info-wrap {
 	margin: 20px auto 0 auto;
 	width: 75%;
@@ -301,7 +562,6 @@ h2 {
 	color: #86754d;
 	text-align: left;
 }
-
 
 .personal-info input {
 	height: 25px;
@@ -439,22 +699,17 @@ h2 {
 	background-color: #D00000;
 }
 
-.history-wrap {
-	margin: 0 auto;
-	width: 85%;
-	margin-bottom: 40px;
-}
+/********************************************
+CONTACT
+*********************************************/
+@media screen and (min-width: 890px) {
 
-@media screen and (min-width: 1050px) {
-	
-	.history-wrap {
-		width: 910px;
+	.contact-wrap {
+		text-align: left;
+		margin: 0 auto;
+		width: 715px;
 	}
 
-}
-
-.history-content {
-	text-align: left;
 }
 
 #map {
@@ -463,6 +718,7 @@ h2 {
 	width: 85%;
 	height: 175px;
 	background-color: white;
+	border: 2px solid black;
 	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
@@ -484,16 +740,6 @@ h2 {
 		display: inline-block;
 		width: 415px;
 		height: 250px;
-	}
-
-}
-
-@media screen and (min-width: 890px) {
-
-	.contact-wrap {
-		text-align: left;
-		margin: 0 auto;
-		width: 715px;
 	}
 
 }
@@ -610,7 +856,7 @@ h2 {
 	margin-bottom: 25px;
 	height: 35px;
 	width: 305px;
-	background-color: #d00000;
+	background-color: #86754d;
 	text-transform: uppercase;
 	font-weight: 600;
 	color: white;
@@ -624,6 +870,9 @@ h2 {
 
 }
 
+/********************************************
+LOGIN & REGISTER
+*********************************************/
 .login-wrap {
 	margin: 0 auto;
 	padding: 20px;
@@ -687,90 +936,4 @@ h2 {
 	margin: 5px 0;
 	height: 35px;
 	width: 250px;
-}
-
-/********************************************
-PAGE BACKGROUNDS
-*********************************************/
-.home-background {
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background: url(/images/vinumauriwine2.jpg) no-repeat fixed;
-	background-position: center center;
-	background-size: cover;
-	z-index: -100; 
-}
-
-.thewine-background {
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background: url(/images/thevinumauriwine.jpg) no-repeat fixed;
-	background-position: center center;
-	background-size: cover;
-	z-index: -100; 
-}
-
-.order-background {
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background: url(/images/ordervinumauri.jpg) no-repeat fixed;
-	background-position: center center;
-	background-size: cover;
-	z-index: -100; 
-}
-
-.membership-background {
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background: url(/images/vinumauricase.jpg) no-repeat fixed;
-	background-position: center center;
-	background-size: cover;
-	z-index: -100; 
-}
-
-.history-background {
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background: url(/images/vinumaurihistory.jpg) no-repeat fixed;
-	background-position: center center;
-	background-size: cover;
-	z-index: -100; 
-}
-
-.contact-background {
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background: url(/images/vinumauribottles.jpg) no-repeat fixed;
-	background-position: center center;
-	background-size: cover;
-	z-index: -100; 
-}
-
-.background-mask {
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background-color: #86754d;
-	opacity: .93;
-	z-index: -50; 
 }

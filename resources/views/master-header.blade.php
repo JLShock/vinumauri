@@ -1,3 +1,10 @@
+<?php
+	if (Session::has('cart')) {
+			$cart = Session::get('cart');
+	} else {
+		$cart = [];
+	}
+?>
 <div class="mobile-menu">
 	<div class="mobile-menu-wrap">
 		<a href="/thewine"><div class="mobile-menu-option">The Wine</div></a>
@@ -27,8 +34,8 @@
 	</div>
 	<a href="/cart">
 		<div class="cart">
-			<div class="cart-count">0</div>
-			{{-- <div class="cart-count">{{ count($cart) }}</div> --}}
+			{{-- <div class="cart-count">0</div> --}}
+			<div class="cart-count">{{ count($cart) }}</div>
 		</div>
 	</a>
 </header>
@@ -44,6 +51,12 @@
 
 <script type=text/javascript>
 	$(document).ready(function() {
+		$.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': '{!! csrf_token() !!}'
+            }
+        });
+        
 		$('.navicon-wrap').on('click', function() {
 			$('.mobile-menu').toggleClass('on');
 		});

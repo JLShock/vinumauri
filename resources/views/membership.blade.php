@@ -88,6 +88,10 @@ $states = array(
 		<div class="main-title">
 			<h1>Wine Club Membership</h1>
 		</div>
+        <div class="membership-wrap">
+            <div class="membership-content">
+            </div>
+        </div>
 	</section>
 
 @endsection

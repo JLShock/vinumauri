@@ -9,9 +9,6 @@
 </div>
 
 <header class="home-header">
-	<div class="on">
-		<div class="navicon-wrap"></div>
-	</div>
 	
 	<a href="/"><div class="logo"></div></a>
 
@@ -23,6 +20,9 @@
 			<a href="/history">History</a>
 			<a href="/contact">Contact</a>
 		</nav>
+	</div>
+	<div class="on">
+		<div class="navicon-wrap home-navicon"></div>
 	</div>
 </header>
 

@@ -277,7 +277,7 @@ $states = array(
 						<tr>
 							<td class="form-title">Card Number:</td>
 							<td class="form-fill">
-								<input type="text" name="ccnumber" maxlength="16" required>
+								<input type="text" name="cc_number" maxlength="16" required>
 								<span class="form-comment">* No dashes or spaces</span>
 							</td>
 						</tr>
@@ -301,13 +301,13 @@ $states = array(
 						<tr>
 							<td class="form-title">CVV:</td>
 							<td class="form-fill">
-								<input class="cvv" type="text" name="ccv" maxlength="4" required>
+								<input class="cvv" type="text" name="cc_ccv" maxlength="4" required>
 							</td>
 						</tr>
 						<tr>
 							<td class="form-title">Name On Card:</td>
 							<td class="form-fill">
-								<input type="text" name="nameoncard" required>
+								<input type="text" name="cc_nameoncard" required>
 							</td>
 						</tr>
 					</table>

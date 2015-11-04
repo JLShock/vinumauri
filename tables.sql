@@ -45,8 +45,7 @@ create table users (
 	updated_at datetime
 );
 
-insert into users (email, password, firstName, lastName, address1, address2, city, state, postalCode, phone) values
-    ('john.shockey@gmail.com', 'wineguy123', 'John', 'Shockey', '500 North Lake Shore Dr.', '#2004', 'Chicago', 'Illinois', '60611', '847-913-3550');
+update users set clubMember = 1 where id = 2;
 
 
 create table orders (

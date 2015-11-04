@@ -63,14 +63,18 @@
 		text-align: right;
 		background: url(/images/icon.png) no-repeat;
 		background-position: center center;
-		background-size: 70%;
+		background-size: 85%;
 		cursor: pointer;
+	}
+
+	.home-navicon {
+		margin-right: 10px;
 	}
 
 	.navicon-wrap:hover {
 		background: url(/images/iconRO.png) no-repeat;
 		background-position: center center;
-		background-size: 70%;
+		background-size: 85%;
 	}
 
 }
@@ -219,4 +223,14 @@ nav a {
 	height: 30px;
 	width: 30px;
 	font-weight: 500;
+}
+
+.master-footer {
+	height: 35px;
+	line-height: 35px;
+	width: 100%;
+	z-index: 900;
+	background-color: black;
+	font-size: 10pt;
+	font-weight: 100;
 }
