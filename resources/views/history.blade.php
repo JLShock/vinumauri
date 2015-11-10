@@ -8,9 +8,11 @@
 	<div class="history-background"></div>
 
 	<section class="hero-panel">
+
 		<div class="main-title">
 			<h1>History</h1>
 		</div>
+
 		<div class="history-wrap">
 			<div class="history-content">
 				<p>A group of successful businessmen got together with some of the finest winemakers in Napa Valley to create a new, high-brand wine, Vinum Auri.  The Latin translation for “Wine of Gold.”  After forming SBW Wine Group, LLC, the group developed, introduced, and released the inaugural vintage of 2010 Vinum Auri.</p>
@@ -21,6 +23,7 @@
 				<p>Gary’s passion for his work (“It’s not my job, it’s my life.") has led him to seek out the best grapes from the finest vineyards in the Napa Valley.  He remains a hands-on artisan who is among the Valley’s most respected winemakers.  Soft-spoken and more inclined to talk about the value of high quality fruit than of winemaker wisdom, Gary continues crafting award winning wines for group and Bourassa Vineyards.</p>
 			</div>
 		</div>
+		
 	</section>
 
 @endsection

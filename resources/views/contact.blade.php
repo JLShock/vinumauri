@@ -8,9 +8,11 @@
 	<div class="contact-background"></div>
 
 	<section class="hero-panel">
+
 		<div class="main-title">
 			<h1>Contact</h1>
 		</div>
+
 		<div class="contact-wrap">
 			<div id="map"></div>
 			<div class="contact-info-wrap">
@@ -24,9 +26,11 @@
 				<div>sales@vinumauri.com</div>
 			</div>
 		</div>
+
 		<div class="contact-form-wrap">
 			<div class="contact-form">
 				<form action="">
+					{!! csrf_field() !!}
 					<div class="form-msg">Please fill out the form below and we will respond to your inquiry as soon as possible:</div>
 					<label>First Name:</label>
 					<input type="text" name="firstname">
@@ -42,9 +46,11 @@
 				</form>
 			</div>
 		</div>
+
 	</section>
 	
 	<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
 	<script src="/bower_components/gmaps/gmaps.js"></script>
 	<script src="/js/g_maps.js"></script>
+	
 @endsection

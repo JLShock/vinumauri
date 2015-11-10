@@ -9,6 +9,7 @@ class CartController extends Controller
 {
 
 	public function addProductToCart() {
+
 		$cart = [];
 
 		if (Session::has('cart')) {
@@ -23,6 +24,7 @@ class CartController extends Controller
 		Session::put('cart', $cart);
 
 		return $cart;
+
 	}
 
 	public function showCart() {
@@ -40,6 +42,7 @@ class CartController extends Controller
 	}
 
 	public function removeProductFromCart() {
+
 		if (Session::has('cart')) {
 			$cart = Session::get('cart');
 		}
@@ -51,6 +54,7 @@ class CartController extends Controller
 		Session::set('cart', $cart);
 		
 		return $cart;
+		
 	}
 
 }

@@ -4,6 +4,7 @@ class CheckoutController extends Controller
 {
 
 	public function getCheckoutFormData() {
+
 		$diffship = Request::input();
 
 		$order->billing_dob_month = Request::input('billing_dob_month');
@@ -52,6 +53,7 @@ class CheckoutController extends Controller
 		$order->ccexp_year = Request::input('ccexp_year');
 		$order->cc_ccv = Request::input('cc_ccv');
 		$order->cc_nameoncard = Request::input('cc_nameoncard');
+		
 	}
 
 }

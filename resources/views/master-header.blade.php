@@ -5,6 +5,7 @@
 		$cart = [];
 	}
 ?>
+
 <div class="mobile-menu">
 	<div class="mobile-menu-wrap">
 		<a href="/thewine"><div class="mobile-menu-option">The Wine</div></a>
@@ -32,13 +33,16 @@
 			<a href="/contact">Contact</a>
 		</nav>
 	</div>
+
 	<a href="/cart">
 		<div class="cart">
 			{{-- <div class="cart-count">0</div> --}}
 			<div class="cart-count">{{ count($cart) }}</div>
 		</div>
 	</a>
+
 </header>
+
 <section class="header-sub">
 	<span><a href="/account">My Account</a> | 
 		@if(Auth::user()) 

@@ -8,11 +8,14 @@
 	<div class="order-background"></div>
 
 	<section class="hero-panel">
+
 		<div class="main-title">
 			<h1>Shopping Cart</h1>
 		</div>
+
 		<table class="cart-items">
 			<?php $cartTotal = 0;?>
+
 			@foreach($products as $product)
 				@if(isset($cart[$product->id]))
 					<?php $cartTotal += ($product->price * $cart[$product->id]);?>
@@ -57,15 +60,19 @@
 					</tr>
 				@endif
 			@endforeach
+			
 		</table>
+
 		<div class="cart-total">
-			( <span class="cart-total-count">{{ count($cart) }}</span> ) Total: <span class="cart-total-price">{{ money_format('$%i', $cartTotal) }}</span>
+			{{-- ( <span class="cart-total-count">{{ count($cart) }}</span> ) --}} Total: <span class="cart-total-price">{{ money_format('$%i', $cartTotal) }}</span>
 		</div>
+
 		@if(count($cart) > 0)
 			<div class="cart-checkout">
 				<button class="checkout-button"><a href="/checkout">Checkout</a></button>
 			</div>
 		@endif
+
 	</section>
 
 	<script type=text/javascript>
@@ -77,4 +84,5 @@
             });
 		});
 	</script>
+
 @endsection

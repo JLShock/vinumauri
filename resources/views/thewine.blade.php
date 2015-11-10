@@ -8,9 +8,11 @@
 	<div class="thewine-background"></div>
 
 	<section class="hero-panel">
+
 		<div class="main-title">
 			<h1>The Wine</h1>
 		</div>
+
 		<div class="display-bottle"></div>
 		<div class="about-wrap">
 			<div class="about-content">
@@ -29,6 +31,7 @@
 				<p class="wine-of-gold">Vinum Auri, Latin for "Wine of Gold"</p>
 			</div>
 		</div>
+
 		<div class="display-bottle"></div>
 		<div class="about-wrap">
 			<div class="about-content">
@@ -47,6 +50,7 @@
 				<p class="wine-of-gold">Vinum Auri, Latin for "Wine of Gold"</p>
 			</div>
 		</div>
+
 	</section>
 
 @endsection

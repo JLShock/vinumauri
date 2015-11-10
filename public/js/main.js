@@ -16,6 +16,13 @@ $(document).ready(function() {
 
 	});
 
+	$('input.order-item-quantity').keydown(function(event){
+	    if (event.keyCode == 109 || event.keyCode == 189) {
+	        event.preventDefault();
+	        return false;
+	    };
+	});
+
 	$('input.item-quantity').keydown(function(event){
 	    if (event.keyCode == 109 || event.keyCode == 189) {
 	        event.preventDefault();

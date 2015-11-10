@@ -85,13 +85,35 @@ $states = array(
 	<div class="membership-background"></div>
 
 	<section class="hero-panel">
+
 		<div class="main-title">
 			<h1>Wine Club Membership</h1>
 		</div>
+
         <div class="membership-wrap">
-            <div class="membership-content">
+
+            <div class="membership-info-wrap">
+
+                <div class="membership-image"></div>
+
+                <div class="membership-info">
+                    <div class="membership-content">
+                        <p>Classic Wines share one common thread together worldwide - an intimate relationship witht the place they originate from. Our Vinum Auri proudly shares this unique style, coming from the Rutherford appellation on the west side of Napa Valley.</p><br>
+                        <p>Your are invited to be a preferred member of the Vinum Auri Gold Wine Club and enjoy quarterly newsletters, industry events, tasting notes, special pre-released vintage allocation offers and pricing, invitations to various member-only events and access to private winery tastings.</p>
+                    </div>
+                    <div class="membership-highlights">
+                        <span>• Special pre-released vintage allocation offers and pricing</span><br>
+                        <span>• Invitations to various member-only events</span><br>
+                        <span>• Access to private winery tastings</span><br>
+                        <span>• Industry events</span><br>
+                        <span>• Tasting notes &amp; Quarterly newsletters</span>
+                    </div>
+                </div>
+
             </div>
+
         </div>
+
 	</section>
 
 @endsection

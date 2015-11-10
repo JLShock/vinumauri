@@ -85,14 +85,22 @@ $states = array(
 	<div class="order-background"></div>
 
 	<section class="hero-panel">
+
 		<div class="main-title">
 			<h1>Checkout</h1>
 		</div>
-		<form class="checkout-form">
+
+		<form class="checkout-form" method="GET" action="/confirmation">
+			{!! csrf_field() !!}
+
 			<div class="personal-info-wrap">
+
 				<h3>&nbsp;Personal Information:</h3>
+
 				<div class="same-as-billing"><input class="shippingtoo" type="checkbox" name="shippingtoo"> Shipping Is Different Than Billing</div>
+
 				<div class="personal-info">
+
 					<div class="billing-info">
 						<h4>Billing Information</h4>
 						<table>
@@ -180,25 +188,26 @@ $states = array(
 							</tr>
 						</table>
 					</div>
+
 					<div class="shipping-info hidden">
 						<h4>Shipping Information</h4>
 						<table>
 							<tr>
 								<td class="form-title">Birth Date:</td>
 								<td class="form-fill">
-									<select name="shipping_dob_month" required>
+									<select name="shipping_dob_month">
 										<option value="-">-</option>
 										@foreach($months as $month_key => $month_val)
 											<option value="{{$month_key}}">{{$month_val}}</option>
 										@endforeach
 									</select>
-									<select name="shipping_dob_day" required>
+									<select name="shipping_dob_day">
 										<option value="-">-</option>
 										@foreach($dates as $date)
 											<option value="{{$date}}">{{$date}}</option>
 										@endforeach
 									</select>
-									<select name="shipping_dob_year" required>
+									<select name="shipping_dob_year">
 										<option value="-">-</option>
 										@for ($i = (date("Y") - 21); $i > 1914; $i--)
     										<option>{{ $i }}</option>
@@ -209,19 +218,19 @@ $states = array(
 							<tr>
 								<td class="form-title">First Name:</td>
 								<td class="form-fill">
-									<input type="text" name="shipping_firstname" required>
+									<input type="text" name="shipping_firstname">
 								</td>
 							</tr>
 							<tr>
 								<td class="form-title">Last Name:</td>
 								<td class="form-fill">
-									<input type="text" name="shipping_lastname" required>
+									<input type="text" name="shipping_lastname">
 								</td>
 							</tr>
 							<tr>
 								<td class="form-title">Address 1:</td>
 								<td class="form-fill">
-									<input type="text" name="shipping_address1" required>
+									<input type="text" name="shipping_address1">
 								</td>
 							</tr>
 							<tr>
@@ -233,13 +242,13 @@ $states = array(
 							<tr>
 								<td class="form-title">City:</td>
 								<td class="form-fill">
-									<input type="text" name="shipping_city" required>
+									<input type="text" name="shipping_city">
 								</td>
 							</tr>
 							<tr>
 								<td class="form-title">State:</td>
 								<td class="form-fill">
-									<select name="shipping_state" required>
+									<select name="shipping_state">
 										<option value="-">-</option>
 										@foreach($states as $state_key => $state_val)
 											<option value="{{$state_key}}">{{$state_val}}</option>
@@ -250,29 +259,36 @@ $states = array(
 							<tr>
 								<td class="form-title">Zip Code:</td>
 								<td class="form-fill">
-									<input type="text" name="shipping_zipcode" required>
+									<input type="text" name="shipping_zipcode">
 								</td>
 							</tr>
 							<tr>
 								<td class="form-title">Phone:</td>
 								<td class="form-fill">
-									<input type="tel" name="shipping_phone" required>
+									<input type="tel" name="shipping_phone">
 								</td>
 							</tr>
 							<tr>
 								<td class="form-title">Email:</td>
 								<td class="form-fill">
-									<input type="email" name="shipping_email" required>
+									<input type="email" name="shipping_email">
 								</td>
 							</tr>
 						</table>
 					</div>
+
 				</div>
+
 			</div>
+
 			<div class="payment-info-wrap">
+
 				<h3>&nbsp;Payment Information:</h3>
+
 				<div class="payment-info">
+
 					<h4>Credit Card Information</h4>
+
 					<table>
 						<tr>
 							<td class="form-title">Card Number:</td>
@@ -311,10 +327,15 @@ $states = array(
 							</td>
 						</tr>
 					</table>
+
 				</div>
+
 			</div>
+
 			<button class="place-order">Place Order</button>
+
 		</form>
+		
 	</section>
 
 @endsection

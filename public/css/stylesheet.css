@@ -409,19 +409,119 @@ ORDER
 MEMBERSHIP
 *********************************************/
 .membership-wrap {
-	margin: 0 auto;
+	margin: 0 auto 25px auto;
 	width: 85%;
-	margin-bottom: 40px;
+	background-color: rgba(0,0,0,.8);
 	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
 
+@media screen and (min-width: 1200px) {
+	
+	.membership-wrap {
+		width: 1060px;
+	}
+
+}
+
+.membership-info-wrap {
+	margin: 25px auto 0 auto;
+	width: 85%;
+	display: inline-flex;
+	justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+	
+	.membership-info-wrap {
+		margin: 0 auto;
+		display: block;
+	}
+
+}
+
+.membership-image {
+	margin: 0 auto;
+	padding-top: 25px;
+	width: 700px;
+	height: 400px;
+	background: url(/images/thevinumauriwine.jpg) no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+@media screen and (max-width: 1200px) {
+	
+	.membership-image {
+		width: 90%;
+		height: 400px;
+	}
+
+}
+
+@media screen and (max-width: 600px) {
+	
+	.membership-image {
+		height: 200px;
+	}
+
+}
+
+.membership-image img {
+	width: 100%;
+	height: 100%;
+}
+
+.membership-info {
+	width: 450px;
+	padding-left: 25px;
+}
+
+@media screen and (max-width: 1200px) {
+	
+	.membership-info {
+		margin-top: 25px;
+		width: 100%;
+		padding: 0;
+	}
+
+}
+
 .membership-content {
-	height: 525px;
 	text-align: left;
-	padding: 5px 25px; 
-	background-color: rgba(0,0,0,.8);
+}
+
+.membership-content p {
+	margin: 0;
+}
+
+.membership-highlights {
+	width: 500px;
+	text-align: left;
+	padding-bottom: 15px;
+}
+
+@media screen and (max-width: 1200px) {
+	
+	.membership-highlights {
+		margin-top: 25px;
+		width: 100%;
+	}
+
+}
+
+.membership-highlights span {
+	color: #D00000;
+	line-height: 35pt;
+}
+
+@media screen and (max-width: 1200px) {
+	
+	.membership-highlights span {
+		line-height: 20pt;
+	}
+
 }
 
 /********************************************
@@ -512,7 +612,7 @@ CART
 }
 
 .cart-delete:hover {
-	color: black; 
+	color: white; 
 }
 
 .cart-total {
@@ -697,6 +797,41 @@ CHECKOUT
 	height: 25px;
 	border: none;
 	background-color: #D00000;
+}
+
+/********************************************
+CONFIRMATION
+*********************************************/
+.confirmation-img {
+	margin: 50px auto 0 auto;
+	height: 150px;
+	width: 130px;
+}
+
+.confirmation-img img {
+	height: 100%;
+	width: 100%;
+}
+
+.confirmation-message {
+	font-size: 28pt;
+	line-height: 40pt;
+}
+
+@media screen and (max-width: 890px) {
+
+	.confirmation-message {
+		font-size: 22pt;
+	}
+
+}
+
+@media screen and (max-width: 500px) {
+
+	.confirmation-message {
+		font-size: 15pt;
+	}
+
 }
 
 /********************************************

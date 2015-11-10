@@ -7,8 +7,11 @@ use Auth;
 class ProductController extends Controller 
 {
 	public function showAll() {
+
 		$products = Product::allProductsDetails();
+
 		return view('order', ['products' => $products, 'user' => Auth::user()]);
+		
 	}
 	
 }

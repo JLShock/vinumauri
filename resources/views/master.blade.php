@@ -11,8 +11,10 @@
 	<script src="/js/main.js"></script>
 </head>
 <body>
+
 	@include('master-header')
 
 	@yield('content')
+	
 </body>
 </html>

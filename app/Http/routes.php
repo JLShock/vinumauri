@@ -30,6 +30,11 @@ Route::get('checkout', function () {
     return view('checkout');
 });
 
+Route::get('confirmation', function () {
+    Session::flush();
+    return view('confirmation');
+});
+
 Route::get('membership', function () {
     return view('membership');
 });
